@@ -1,66 +1,105 @@
-# Hi, I'm Wenlu Jiao 👋
+# 🚢 AutoClearance: AI-Powered Logistics Compliance Team
 
- Economics student at UC Santa Cruz  
- Based in the Bay Area | Interested in Data, AI, and Applied Analytics   
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![CrewAI](https://img.shields.io/badge/Framework-CrewAI-orange)
+![Status](https://img.shields.io/badge/Status-Building%20in%20Public-green)
 
----
-
-### About Me
-I’m an undergraduate student with a background in Economics and a growing interest in quantitative analysis, data science, and optimization.  
-Recently, I’ve been learning Python, statistics, and machine learning to build a stronger foundation for graduate study in applied AI.
-
-I’m especially interested in:
-- How data and algorithms improve decision-making in business or policy  
-- Quantitative modeling and optimization methods  
-- Applications of AI in economics and management  
+> **From "Manual Entry" to "AI Automation".**
+> A Multi-Agent System designed to streamline cross-border customs clearance data processing.
 
 ---
 
-### Skills
-| Category | Tools / Languages |
-|-----------|-------------------|
-| Programming | Python (Pandas, NumPy, Matplotlib), SQL |
-| Statistics | Probability, Regression, Econometrics |
-| Machine Learning | Scikit-learn (basics), Linear/Tree Models |
-| Visualization | Tableau, Plotly |
-| Math | Calculus, Linear Algebra, Optimization (in progress) |
+## 📖 The Backstory 
+
+**"Why does it take 30 minutes to process one invoice?"**
+
+During my time as a **Logistics Data Analyst Intern** at *Shenzhen Qianhai Wanbang Supply Chain*, I analyzed the daily workflow of customs brokers. I discovered a critical bottleneck:
+
+* **70% of operational time** was wasted on manual data entry from non-standardized invoices (PDF/Images/Excel).
+* **Human Error:** Fatigue led to typos in HS Codes and weight discrepancies (e.g., Gross Weight < Net Weight), causing compliance risks.
+
+Combining my academic background in **Economics & Statistics (UCSC)** with my industry insights, I built **AutoClearance**: a virtual team of AI agents to solve this data mess.
 
 ---
 
-### Selected Projects
-- 📊 [Data Analytics Dashboard](https://github.com/wenlujiao/data-dashboard)  
-  Simple Python dashboard for analyzing sales and visualizing trends.  
-  *Pandas • Plotly • Data Cleaning & Visualization*
+## 🤖 How It Works 
 
-- 🧠 [Sales Forecasting Model](https://github.com/wenlujiao/sales-forecasting)  
-  A regression-based model to predict retail sales volume.  
-  *Scikit-learn • Linear Regression • RMSE evaluation*
+I utilize **CrewAI** to orchestrate a team of autonomous agents, simulating a real-world "Compliance Department":
 
-- 📈 [Econometrics Practice Notebooks](https://github.com/wenlujiao/econ-notebooks)  
-  Coursework notes and projects from econometrics and statistics classes.  
-  *Python • Statsmodels • OLS / Logit models*
-
----
-
-### Current Goals
-- Strengthen math and programming foundations at UCSC  
-- Build a small portfolio of AI / data-related projects  
-- Apply to Stanford’s MS&E program after graduation  
-- Continue improving quantitative research and writing skills  
+### The Agent Crew
+1.  **📄 The Ingest Agent (Data Cleaning):**
+    * **Role:** Extracts structured data (Description, Qty, Price) from messy raw text/files using LLM capabilities.
+    * **Task:** Standardizes unit measurements and corrects OCR typos (e.g., "plstic" -> "Plastic").
+2.  **🔍 The Auditor Agent (Stat & Logic Check):**
+    * **Role:** Applies statistical logic to ensure data integrity.
+    * **Logic:** Verifies that `Total Value = Unit Price * Qty` and `Gross Weight > Net Weight`. It flags anomalies just like a senior broker would.
+3.  **📦 The Delivery Agent (System Integration):**
+    * **Role:** Formats the verified data into a standard **JSON/CSV** object, ready for import into ERP systems (e.g., CargoWise).
 
 ---
 
-### GitHub Stats
-![Wenlu's GitHub stats](https://github-readme-stats.vercel.app/api?username=wenlujiao&show_icons=true&theme=graywhite)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=wenlujiao&layout=compact&theme=graywhite)
+## 🛠️ Tech Stack 
+
+* **Core Framework:** [CrewAI](https://github.com/joaomdmoura/crewAI) (Agent Orchestration)
+* **Language:** Python 3.10+
+* **LLM:** OpenAI GPT-4 (via API)
+* **Tools:** Pandas (Data Analysis), LangChain
 
 ---
 
-### Contact
-📧 [Email](mailto:Wenlujiao@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/feed)  
-🌐 [GitHub Portfolio](https://github.com/wenlujiao)
+## 🚀 Getting Started 
+
+### Prerequisites
+* Python 3.10 or higher
+* An OpenAI API Key
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/wenlujiao/AutoClearance.git](https://github.com/wenlujiao/AutoClearance.git)
+    cd AutoClearance
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    pip install crewai crewai-tools
+    ```
+
+3.  **Set up environment variables**
+    * Create a `.env` file in the root directory.
+    * Add your API key (**Important:** Do NOT upload this file to GitHub):
+    ```text
+    OPENAI_API_KEY=sk-your_key_here
+    ```
+
+4.  **Run the Agents**
+    ```bash
+    python main.py
+    ```
 
 ---
 
-> “Learning by doing — building small projects to understand big ideas.”
+## 📊 Roadmap 
+
+I am building this project in public based on "Human-in-the-loop" principles.
+
+* [x] **Phase 1:** Build the "Data Cleaning Agent" to standardize messy text.
+* [ ] **Phase 2:** Integrate "Auditor Agent" for weight and value logic checks.
+* [ ] **Phase 3:** Connect to an external HS Code lookup tool (RAG implementation).
+* [ ] **Phase 4:** Build a Streamlit UI for drag-and-drop usage.
+
+---
+
+## 👤 About Me
+
+**Wenlu Jiao**
+* 🎓 **UCSC** Undergraduate in Economics & Statistics.
+* 💼 Former **Logistics Data Analyst Intern** (Shenzhen Qianhai Wanbang).
+* Passionate about leveraging AI agents to solve vertical industry problems.
+
+[Connect on LinkedIn](https://www.linkedin.com/in/wenlu-jiao)
+
+---
+
+*This project is for educational and portfolio purposes.*
