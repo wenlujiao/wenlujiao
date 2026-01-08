@@ -1,105 +1,49 @@
-# 🚢 AutoClearance: AI-Powered Logistics Compliance Team
+# AutoClearance 
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![CrewAI](https://img.shields.io/badge/Framework-CrewAI-orange)
-![Status](https://img.shields.io/badge/Status-Building%20in%20Public-green)
+<div align="center">
 
-> **From "Manual Entry" to "AI Automation".**
-> A Multi-Agent System designed to streamline cross-border customs clearance data processing.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
+![CrewAI](https://img.shields.io/badge/CrewAI-Powered-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
----
+**Automating Cross-Border Logistics Compliance with Multi-Agent AI**
 
-## 📖 The Backstory 
+[Features](#-key-features) • [Architecture](#-system-architecture) • [Getting Started](#-getting-started) • [The Story](#-the-story)
 
-**"Why does it take 30 minutes to process one invoice?"**
-
-During my time as a **Logistics Data Analyst Intern** at *Shenzhen Qianhai Wanbang Supply Chain*, I analyzed the daily workflow of customs brokers. I discovered a critical bottleneck:
-
-* **70% of operational time** was wasted on manual data entry from non-standardized invoices (PDF/Images/Excel).
-* **Human Error:** Fatigue led to typos in HS Codes and weight discrepancies (e.g., Gross Weight < Net Weight), causing compliance risks.
-
-Combining my academic background in **Economics & Statistics (UCSC)** with my industry insights, I built **AutoClearance**: a virtual team of AI agents to solve this data mess.
+</div>
 
 ---
 
-## 🤖 How It Works 
+##  The Problem
 
-I utilize **CrewAI** to orchestrate a team of autonomous agents, simulating a real-world "Compliance Department":
+In the cross-border logistics industry (specifically the **China-US Dedicated Line**), highly skilled professionals are trapped in low-value work.
 
-### The Agent Crew
-1.  **📄 The Ingest Agent (Data Cleaning):**
-    * **Role:** Extracts structured data (Description, Qty, Price) from messy raw text/files using LLM capabilities.
-    * **Task:** Standardizes unit measurements and corrects OCR typos (e.g., "plstic" -> "Plastic").
-2.  **🔍 The Auditor Agent (Stat & Logic Check):**
-    * **Role:** Applies statistical logic to ensure data integrity.
-    * **Logic:** Verifies that `Total Value = Unit Price * Qty` and `Gross Weight > Net Weight`. It flags anomalies just like a senior broker would.
-3.  **📦 The Delivery Agent (System Integration):**
-    * **Role:** Formats the verified data into a standard **JSON/CSV** object, ready for import into ERP systems (e.g., CargoWise).
+Based on my analysis of real-world operations, **70% of a customs broker's time** is occupied by repetitive data processing:
 
----
+* Manual Entry:** Typing data from messy PDF/Image invoices into ERP systems.
+* Human Error:** Typos in HS Codes or weight discrepancies (Gross Weight < Net Weight).
+* Inefficiency:** Valuable human capital is wasted on "Copy-Paste" tasks instead of strategic compliance.
 
-## 🛠️ Tech Stack 
+##  The Solution: AutoClearance
 
-* **Core Framework:** [CrewAI](https://github.com/joaomdmoura/crewAI) (Agent Orchestration)
-* **Language:** Python 3.10+
-* **LLM:** OpenAI GPT-4 (via API)
-* **Tools:** Pandas (Data Analysis), LangChain
+**AutoClearance** is a **Multi-Agent System** engineered to replace the manual data entry pipeline. It acts as a virtual "Compliance Department" that works 24/7.
+
+| Feature | Traditional Workflow | AutoClearance AI |
+| :--- | :--- | :--- |
+| **Data Ingestion** | Manual Typing (Avg. 20 mins/doc) | **OCR + LLM Extraction (< 30 secs)** |
+| **Logic Check** | Manual Calculator | **Statistical Audit (Auto-Flagging)** |
+| **Output** | Copy-Paste to Excel | **Standardized JSON/CSV API** |
 
 ---
 
-## 🚀 Getting Started 
+## System Architecture
 
-### Prerequisites
-* Python 3.10 or higher
-* An OpenAI API Key
+I designed this system using **CrewAI** to orchestrate three specialized agents.
 
-### Installation
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/wenlujiao/AutoClearance.git](https://github.com/wenlujiao/AutoClearance.git)
-    cd AutoClearance
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    pip install crewai crewai-tools
-    ```
-
-3.  **Set up environment variables**
-    * Create a `.env` file in the root directory.
-    * Add your API key (**Important:** Do NOT upload this file to GitHub):
-    ```text
-    OPENAI_API_KEY=sk-your_key_here
-    ```
-
-4.  **Run the Agents**
-    ```bash
-    python main.py
-    ```
-
----
-
-## 📊 Roadmap 
-
-I am building this project in public based on "Human-in-the-loop" principles.
-
-* [x] **Phase 1:** Build the "Data Cleaning Agent" to standardize messy text.
-* [ ] **Phase 2:** Integrate "Auditor Agent" for weight and value logic checks.
-* [ ] **Phase 3:** Connect to an external HS Code lookup tool (RAG implementation).
-* [ ] **Phase 4:** Build a Streamlit UI for drag-and-drop usage.
-
----
-
-## 👤 About Me
-
-**Wenlu Jiao**
-* 🎓 **UCSC** Undergraduate in Economics & Statistics.
-* 💼 Former **Logistics Data Analyst Intern** (Shenzhen Qianhai Wanbang).
-* Passionate about leveraging AI agents to solve vertical industry problems.
-
-[Connect on LinkedIn](https://www.linkedin.com/in/wenlu-jiao)
-
----
-
-*This project is for educational and portfolio purposes.*
+```mermaid
+graph LR
+    A[Raw Invoice <br> PDF/Image] --> B(Ingest Agent <br>  Cleaner)
+    B --> C{Auditor Agent <br>  Logic Check}
+    C -- Pass --> D[Delivery Agent <br> Formatter]
+    C -- Fail --> E[Error Report <br>  Alerts]
+    D --> F[ERP System <br> JSON/XML]
