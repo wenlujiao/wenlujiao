@@ -1,8 +1,7 @@
 # Hi, I'm Wenlu Jiao 👋
 
-🎓 Economics student at UC Santa Cruz  
-📍 Based in the Bay Area | Interested in Data, AI, and Applied Analytics  
-💡 Planning to apply for the **Stanford MS&E (AI & Data track)** program  
+ Economics student at UC Santa Cruz  
+ Based in the Bay Area | Interested in Data, AI, and Applied Analytics   
 
 ---
 
