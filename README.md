@@ -1,39 +1,38 @@
-# AutoClearance
+# Hi there, I'm Wenlu Jiao 👋
 
-<div align="center">
+**Undergraduate Researcher @ UC Santa Cruz** *B.A. Economics | Minor in Statistics*
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
-![CrewAI](https://img.shields.io/badge/CrewAI-Powered-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+I am an Economics student with a growing passion for **Data Science** and **Machine Learning**. My goal is to bridge the gap between empirical economic analysis and modern computational methods. 
 
-**Automated Cross-Border Logistics Compliance System**
-
-</div>
+I am actively looking for **research opportunities** to learn the real-world workflow—from data cleaning and preprocessing to experiment replication.
 
 ---
 
-## Core Functionality
+### 🎓 Education
+**University of California, Santa Cruz** (Expected 2028)
+* **Major:** B.A. in Economics
+* **Minor:** Statistics
+* **Relevant Coursework:** Python Programming (CSE 20), Statistics (STAT 17)
 
-A Multi-Agent System designed to automate invoice processing and compliance auditing for logistics.
+### 🔬 Research Interests
+* Data Science & Machine Learning
+* Empirical Analysis
+* Applied Statistics
 
-* **Zero-Shot Extraction:** Converts unstructured PDF/Image invoices into structured data using OCR + LLM.
-* **Logic Verification:** Automatically audits HS Codes and validates weight consistency (Gross vs. Net).
-* **ERP Integration:** Outputs standardized JSON/XML for direct system ingestion.
+### 💼 Experience
+**Data Analyst Intern** | *Shenzhen Qianhai Wanbang* (2023 – 2024)
+* Performed data cleaning and statistical analysis on real-world business datasets.
+* Utilized Excel for statistical modeling and reporting.
 
-## Performance
+### 🤝 Collaboration & Availability
+I am currently available for **part-time research involvement**. I am eager to contribute to:
+* Data cleaning and preprocessing tasks (ETL)
+* Experiment replication
+* Data analysis
+* *Open to remote collaboration*
 
-| Metric | Manual Process | AutoClearance |
-| :--- | :--- | :--- |
-| **Processing Time** | ~20 mins / doc | **< 30 secs / doc** |
-| **Method** | Manual Entry | **Automated Pipeline** |
-| **Error Handling** | Human Review | **Statistical Audit** |
+---
 
-## Architecture
-
-```mermaid
-graph LR
-    A[Raw Invoice <br> PDF/Image] --> B(Ingest Agent <br> OCR + Cleaning)
-    B --> C{Auditor Agent <br> Logic Check}
-    C -- Pass --> D[Delivery Agent <br> JSON Formatter]
-    C -- Fail --> E[Error Report <br> Flagged Items]
-    D --> F[ERP System]
+### 📫 Connect with Me
+* 📧 **Email:** [wjiao2@ucsc.edu](mailto:wjiao2@ucsc.edu)
+* 🔗 **LinkedIn:** [linkedin.com/in/wenlu-jiao](https://linkedin.com/in/wenlu-jiao-a57a32273)
