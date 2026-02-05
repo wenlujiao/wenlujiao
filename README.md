@@ -2,9 +2,7 @@
 
 **Undergraduate Researcher @ UC Santa Cruz** *B.A. Economics | Minor in Statistics*
 
-I am an Economics student with a growing passion for **Data Science** and **Machine Learning**. My goal is to bridge the gap between empirical economic analysis and modern computational methods. 
-
-I am actively looking for **research opportunities** to learn the real-world workflow—from data cleaning and preprocessing to experiment replication.
+I am an Economics student with a growing passion for **Data Science** and **Machine Learning**. My goal is to bridge the gap between empirical economic analysis and modern computational methods.
 
 ---
 
